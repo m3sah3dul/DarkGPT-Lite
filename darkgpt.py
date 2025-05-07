@@ -39,6 +39,28 @@
 # 
 # The author explicitly disclaims ALL liability for ANY consequences that 
 # arise from the use or misuse of this software. Use at your own risk.
+#
+# OPENAI API KEY USAGE WARNING:
+#
+# MISUSE OF OPENAI API KEYS CAN RESULT IN SEVERE CONSEQUENCES INCLUDING:
+# 1. Immediate termination of your OpenAI account
+# 2. Permanent ban from all OpenAI services and products
+# 3. Forfeiture of any remaining API credits or subscription fees
+# 4. Potential legal action for violations of OpenAI's Terms of Service
+# 5. Financial liability for unauthorized use or exceeding usage limits
+# 6. Possible reporting to relevant authorities for illegal content generation
+# 7. Blacklisting from future API access across related AI services
+#
+# You are solely responsible for all activities conducted with your API key.
+# OpenAI actively monitors API usage for violations of their policies, including:
+# - Generating harmful, abusive, or illegal content
+# - Creating misinformation or engaging in political campaigning/lobbying
+# - Developing autonomous weapons or illegal surveillance systems
+# - Bypassing safety limitations or content filters
+# - Sharing your API key with unauthorized third parties
+#
+# The author of this software explicitly disclaims all responsibility for how you
+# use your API key and any resulting consequences or penalties.
 
 DARKGPT_VERSION = "1.1.0"
 GITHUB_RAW_URL = "https://raw.githubusercontent.com/InfoSecREDD/DarkGPT-Lite/main/darkgpt.py"
@@ -638,10 +660,19 @@ class DarkGPT:
             self.api_key = self.config["api_key"]
             print(f"{Colors.GREEN}Using saved API key: {self.api_key[:8]}...{Colors.RESET}")
         else:
+            print(f"\n{Colors.BRIGHT_RED}=== API KEY USAGE WARNING ==={Colors.RESET}")
+            print(f"{Colors.BRIGHT_RED}Misuse of OpenAI API keys can result in account termination, permanent ban,")
+            print(f"forfeiture of credits, legal action, and financial liability.{Colors.RESET}")
+            print(f"{Colors.BRIGHT_RED}You are solely responsible for all activities conducted with your API key.{Colors.RESET}")
+            print(f"{Colors.BRIGHT_RED}See DISCLAIMER.md for full details on potential consequences.{Colors.RESET}\n")
+            
             self.api_key = input(f"{Colors.YELLOW}Enter your OpenAI API Key: {Colors.RESET}")
             if not self.api_key.startswith("sk-"):
                 print(f"{Colors.BRIGHT_RED}Warning: This doesn't look like a OpenAIbased API key.{Colors.RESET}")
-            self.save_config()
+        
+        # Update the configuration
+        self.config["api_key"] = self.api_key
+        self.save_config()
         
         if self.config.get("system_message"):
             self.system_message = self.config["system_message"]
@@ -1319,9 +1350,18 @@ class DarkGPT:
     def _change_api_key(self):
         RainEffects.transition_effect("API Key Configuration")
         print(f"\n{Colors.BRIGHT_GREEN}=== Change API Key ==={Colors.RESET}")
+        
+        print(f"\n{Colors.BRIGHT_RED}=== API KEY USAGE WARNING ==={Colors.RESET}")
+        print(f"{Colors.BRIGHT_RED}Misuse of OpenAI API keys can result in account termination, permanent ban,")
+        print(f"forfeiture of credits, legal action, and financial liability.{Colors.RESET}")
+        print(f"{Colors.BRIGHT_RED}You are solely responsible for all activities conducted with your API key.{Colors.RESET}")
+        print(f"{Colors.BRIGHT_RED}See DISCLAIMER.md for full details on potential consequences.{Colors.RESET}\n")
+        
         self.api_key = input(f"{Colors.YELLOW}Enter your OpenAI API Key: {Colors.RESET}")
         if not self.api_key.startswith("sk-"):
             print(f"{Colors.BRIGHT_RED}Warning: This doesn't look like a OpenAIbased API key.{Colors.RESET}")
+        
+        self.config["api_key"] = self.api_key
         self.save_config()
         print(f"{Colors.BRIGHT_GREEN}API key updated successfully.{Colors.RESET}")
         time.sleep(1.5)
