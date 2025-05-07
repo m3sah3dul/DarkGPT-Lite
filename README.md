@@ -20,6 +20,8 @@
 
 DarkGPT Lite is a specialized CLI tool providing unrestricted conversations with AI for cybersecurity research purposes:
 
+(NOTE: To make this clear, this is based off of "Prompt Engineering", when this prompt breaks fully. There is a handful of new prompts I have and will rotate them accordingly.)
+
 - **Unrestricted AI Conversations**: Direct access to AI without typical safety filters
 - **Project Management**: Create, edit, and manage code projects within the application
 - **Virtual Environment Handling**: Automatic setup and management of Python dependencies
