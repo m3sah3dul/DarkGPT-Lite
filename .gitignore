@@ -135,6 +135,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.darkgpt_venv
+.darkgpt_venv/
 
 # Spyder project settings
 .spyderproject
