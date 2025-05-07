@@ -122,6 +122,16 @@ This tool is provided for cybersecurity educational and research purposes only. 
 
 Please read the full [DISCLAIMER.md](DISCLAIMER.md) before using this tool.
 
+**⚠️ API Key Warning ⚠️**
+
+Using this tool with your OpenAI API key carries significant risks. Misuse can result in:
+- Immediate termination of your OpenAI account
+- Permanent ban from all OpenAI services
+- Financial liability for unauthorized use
+- Potential legal consequences
+
+You are solely responsible for all activities conducted with your API key.
+
 ## License
 
 DarkGPT Lite is released under the MIT License. See the LICENSE file for details.
